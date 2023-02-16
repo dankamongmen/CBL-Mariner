@@ -4,7 +4,8 @@ After=network.target sshd-keygen.service
 Wants=sshd-keygen.service
 
 [Service]
-ExecStart=/usr/sbin/sshd -D
+EnvironmentFile=-/etc/default/ssh
+ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=always

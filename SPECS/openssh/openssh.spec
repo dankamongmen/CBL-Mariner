@@ -3,7 +3,7 @@
 Summary:        Free version of the SSH connectivity tools
 Name:           openssh
 Version:        %{openssh_ver}
-Release:        7%{?dist}
+Release:        8%{?dist}
 License:        BSD
 Vendor:         Microsoft Corporation
 Distribution:   Mariner
@@ -261,6 +261,9 @@ fi
 %{_mandir}/man8/ssh-sk-helper.8.gz
 
 %changelog
+* Wed Feb 15 2023 nick black <niblack@microsoft.com> - 8.8p1-8
+Provide /etc/default/ssh, use it as optional EnvironmentFile for sshd options
+
 * Tue Jul 26 2022 Minghe Ren <mingheren@microsoft.com> - 8.8p1-7
 - Update sshd_config to imporve SSH security
 
